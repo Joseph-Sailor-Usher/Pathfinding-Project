@@ -20,8 +20,9 @@ public class PinPlacer : MonoBehaviour
 {
     public GameObject pinPrefab;
     public Vector3 globeCenter;
-    public LocationList locationList; // Use the custom wrapper class
+    public LocationList locationList;
     public List<GameObject> activePins;
+    public List<Color> colors;
 
     private void Start()
     {

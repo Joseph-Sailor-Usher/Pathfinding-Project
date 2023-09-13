@@ -2838,6 +2838,9 @@ MonoBehaviour:
     - longitude: 34.0549
       latitude: 118.2426
       name: Los Angeles
+    - longitude: 20.6597
+      latitude: 103.3496
+      name: Guadalajara
   activePins: []
 --- !u!4 &1591146438
 Transform:
@@ -3252,11 +3255,11 @@ MonoBehaviour:
   _url: 
   _ionAssetID: 1
   _ionAccessToken: 
-  _maximumScreenSpaceError: 16
+  _maximumScreenSpaceError: 1280
   _preloadAncestors: 1
   _preloadSiblings: 1
   _forbidHoles: 0
-  _maximumSimultaneousTileLoads: 20
+  _maximumSimultaneousTileLoads: 30
   _maximumCachedBytes: 536870912
   _loadingDescendantLimit: 20
   _enableFrustumCulling: 1
@@ -4131,7 +4134,7 @@ MonoBehaviour:
   _ecefX: 2.3994632863229417e-26
   _ecefY: -0.00000000039186209248144716
   _ecefZ: 6356752.314245179
-  _scale: 0.000000056
+  _scale: 0.000000055
 --- !u!4 &2068693426
 Transform:
   m_ObjectHideFlags: 0
@@ -4140,7 +4143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068693424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.207, z: 0}
+  m_LocalPosition: {x: 0, y: 1.203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -2,6 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct Location
+{
+    public float longitude, latitude;
+    public string name;
+}
+
+public struct Edge
+{
+    public string vertexNameA, vertexNameB;
+}
+
 public class Graph : MonoBehaviour
 {
     //vertices have names because they're locations on a globe
@@ -17,13 +28,17 @@ public class Graph : MonoBehaviour
 
     private void Start()
     {
-        vertices = new();
-        edges = new();
+        if(vertices == null)
+            vertices = new();
+        if(edges == null)
+            edges = new();
     }
 
     //Add a vertex
     public void AddVertex(string name, GameObject vertextGameObject)
     {
+        if(vertices == null)
+            vertices = new();
         vertices.Add(name, vertextGameObject);
     }
 
@@ -42,7 +57,9 @@ public class Graph : MonoBehaviour
     //Add an edge
     public void AddEdge(string vertexNameA, string vertexNameB)
     {
-        if(vertices.ContainsKey(vertexNameA) == false)
+        if (edges == null)
+            edges = new();
+        if (vertices.ContainsKey(vertexNameA) == false)
         {
             Debug.Log("Failed to add edge because there is no vertex of the name: " + vertexNameA);
             return;

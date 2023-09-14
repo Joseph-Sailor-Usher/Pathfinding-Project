@@ -1,0 +1,81 @@
+Vertices
+Kansas City
+39.0997
+94.5786
+New York
+40.7128
+74.006
+Orlando
+28.5384
+81.3789
+Los Angeles
+34.0549
+118.2426
+Guadalajara
+20.6597
+103.3496
+Gomez Pelacio
+25.5891
+103.4859
+Victoria
+48.4284
+123.3656
+Denver
+39.7392
+104.9903
+Eureka Springs
+36.4006
+93.7393
+Minneapolis
+44.9778
+93.2650
+Memphis
+35.1495
+90.0490
+Salt lake City
+40.7608
+111.8910
+Detroit
+42.3314
+83.0458
+Edges
+Kansas City
+New York
+Orlando
+New York
+Eureka Springs
+Guadalajara
+Los Angeles
+Denver
+Denver
+Kansas City
+Gomez Pelacio
+Los Angeles
+Gomez Pelacio
+Guadalajara
+Orlando
+Memphis
+Victoria
+Minneapolis
+Los Angeles
+Victoria
+Denver
+Gomez Pelacio
+Kansas City
+Eureka Springs
+Kansas City
+Minneapolis
+Memphis
+Kansas City
+Memphis
+Eureka Springs
+Los Angeles
+Salt lake City
+Salt lake City
+Minneapolis
+Salt lake City
+Denver
+Detroit
+New York
+Detroit
+Minneapolis

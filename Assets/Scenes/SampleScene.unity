@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0a802d23dda58a341b1d1e78e403d683, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: dfc82d5c9f7f18849b6168c8287453f7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1777,7 +1777,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9446c9a5b7ab5d44992b5d3c49eec0b3, type: 2}
   - {fileID: 2100000, guid: d6defba89460599438906f214da73499, type: 2}
   - {fileID: 2100000, guid: 69c0e874c5f9a88418f2b3cd1e575d7a, type: 2}
-  edgeRadius: 0.01
+  edgeRadius: 0.002
   edgeSegments: 9
 --- !u!1001 &808595839
 PrefabInstance:
@@ -2940,6 +2940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7d43ef65d1ce348941d427dce61f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  graph: {fileID: 754055322}
   pinPrefab: {fileID: 1673021686131000395, guid: 28a885159a234184aabd174058d19ed6,
     type: 3}
   globeCenter: {x: 0, y: 0.856, z: 0}
@@ -2960,6 +2961,9 @@ MonoBehaviour:
     - longitude: 20.6597
       latitude: 103.3496
       name: Guadalajara
+    - longitude: 25.5891
+      latitude: 103.4859
+      name: Gomez Pelacio
   activePins: []
   colors: []
 --- !u!4 &1591146438

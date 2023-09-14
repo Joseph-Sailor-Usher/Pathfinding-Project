@@ -15,6 +15,12 @@ public class Graph : MonoBehaviour
     //To set the number of segments in the cylinder representations of edges
     public int edgeSegments = 9;
 
+    private void Start()
+    {
+        vertices = new();
+        edges = new();
+    }
+
     //Add a vertex
     public void AddVertex(string name, GameObject vertextGameObject)
     {

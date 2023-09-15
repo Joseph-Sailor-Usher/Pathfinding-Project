@@ -5,7 +5,9 @@ using UnityEngine;
 public class GraphLoadingAnimation : MonoBehaviour
 {
     public Graph graph;
+    public PolyphonicSinewave sines;
     public Material defaultMaterial, indicatorMaterial;
+    public float offsetFreq = 100, freqScalar = 10.0f;
 
     private void Start()
     {
@@ -29,6 +31,9 @@ public class GraphLoadingAnimation : MonoBehaviour
             {
                 MeshRenderer currentEdgeMeshRenderer = graph.GetEdge(location, adjacentLocation).GetComponent<MeshRenderer>();
                 currentEdgeMeshRenderer.material = indicatorMaterial;
+                float newFreq = Vector3.Distance(graph.vertices[location].transform.position, graph.vertices[adjacentLocation].transform.position);
+                sines.frequency1 = (newFreq * freqScalar) + offsetFreq;
+                sines.PlayTone(sines.frequency1, 0);
                 yield return new WaitForSeconds(0.2f);
                 currentEdgeMeshRenderer.material = defaultMaterial;
             }

@@ -1738,6 +1738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754055321}
   - component: {fileID: 754055322}
+  - component: {fileID: 754055323}
   m_Layer: 0
   m_Name: Graph
   m_TagString: Untagged
@@ -1773,12 +1774,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
-  - {fileID: 2100000, guid: 9dd43bed161ef43418df4251efa93f2a, type: 2}
+  - {fileID: 2100000, guid: 2eb559798aaf4f24d9d2242de8557dfe, type: 2}
   - {fileID: 2100000, guid: 9446c9a5b7ab5d44992b5d3c49eec0b3, type: 2}
   - {fileID: 2100000, guid: d6defba89460599438906f214da73499, type: 2}
   - {fileID: 2100000, guid: 69c0e874c5f9a88418f2b3cd1e575d7a, type: 2}
-  edgeRadius: 0.002
+  edgeRadius: 0.001
   edgeSegments: 9
+--- !u!114 &754055323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754055320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4492460c6f08d95429ba4d3407f396c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graph: {fileID: 754055322}
+  defaultMaterial: {fileID: 2100000, guid: 2eb559798aaf4f24d9d2242de8557dfe, type: 2}
+  indicatorMaterial: {fileID: 2100000, guid: d2413b22dd3cfc34795e10f4edc76542, type: 2}
 --- !u!1001 &808595839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2944,26 +2960,6 @@ MonoBehaviour:
   pinPrefab: {fileID: 1673021686131000395, guid: 28a885159a234184aabd174058d19ed6,
     type: 3}
   globeCenter: {x: 0, y: 0.856, z: 0}
-  locationList:
-    locations:
-    - longitude: 39.0997
-      latitude: 94.5786
-      name: Kansas City
-    - longitude: 40.7128
-      latitude: 74.006
-      name: New York
-    - longitude: 28.5384
-      latitude: 81.3789
-      name: Orlando
-    - longitude: 34.0549
-      latitude: 118.2426
-      name: Los Angeles
-    - longitude: 20.6597
-      latitude: 103.3496
-      name: Guadalajara
-    - longitude: 25.5891
-      latitude: 103.4859
-      name: Gomez Pelacio
   activePins: []
   colors: []
 --- !u!4 &1591146438
@@ -3547,6 +3543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1854012929}
+  - component: {fileID: 1854012930}
   m_Layer: 0
   m_Name: Pathfinding
   m_TagString: Untagged
@@ -3571,6 +3568,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854012930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854012928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b030dc8d8f72d3845bb0e7ed5c825695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vertices: []
+  coordinates: []
+  edges: []
+  graph: {fileID: 754055322}
+  pinPlacer: {fileID: 1591146437}
 --- !u!1 &1854390152
 GameObject:
   m_ObjectHideFlags: 0

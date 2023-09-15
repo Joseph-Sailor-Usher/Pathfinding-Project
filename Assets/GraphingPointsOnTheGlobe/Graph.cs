@@ -19,6 +19,9 @@ public class Graph : MonoBehaviour
     public Dictionary<string, GameObject> vertices;
     //Edges are between two locations, so we need a way to get them.
     public Dictionary<string, GameObject> edges;
+    //Store the adjacencies
+    public Dictionary<string, List<string>> adjacentVertices;
+
     //Materials to indicate the state of each edge
     public List<Material> materials;
     //To set the radius of edges
@@ -32,6 +35,8 @@ public class Graph : MonoBehaviour
             vertices = new();
         if(edges == null)
             edges = new();
+        if (adjacentVertices == null)
+            adjacentVertices = new();
     }
 
     //Add a vertex
@@ -39,7 +44,10 @@ public class Graph : MonoBehaviour
     {
         if(vertices == null)
             vertices = new();
+        if (adjacentVertices == null)
+            adjacentVertices = new();
         vertices.Add(name, vertextGameObject);
+        adjacentVertices.Add(name, new List<string>());
     }
 
     //Remove a vertex
@@ -78,6 +86,9 @@ public class Graph : MonoBehaviour
 
         GameObject newEdge = CylinderGenerator.CreateCylinder(vertices[vertexNameA].transform.position, vertices[vertexNameB].transform.position, materials[0], edgeRadius, edgeSegments, this.transform);
         edges.Add(vertexNameA + vertexNameB, newEdge);
+
+        adjacentVertices[vertexNameA].Add(vertexNameB);
+        adjacentVertices[vertexNameB].Add(vertexNameA);
     }
 
     //Remove and edge
@@ -93,5 +104,15 @@ public class Graph : MonoBehaviour
             Destroy(edges[vertexNameB + vertexNameA]);
             edges.Remove(vertexNameB + vertexNameA);
         }
+    }
+
+    public GameObject GetEdge(string vertexNameA, string vertexNameB)
+    {
+        if (edges.ContainsKey(vertexNameA + vertexNameB))
+            return edges[vertexNameA + vertexNameB];
+        if (edges.ContainsKey(vertexNameB + vertexNameA))
+            return edges[vertexNameB + vertexNameA];
+        Debug.Log("No such edge found in the graph: " + vertexNameA + vertexNameB);
+        return new GameObject();
     }
 }
